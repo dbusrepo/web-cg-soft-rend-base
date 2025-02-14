@@ -19,6 +19,7 @@ import {
 } from '../input/inputManager';
 import { InputAction, InputActionBehavior } from '../input/inputAction';
 import { AuxAppWorkerCommandEnum } from './auxAppWorker';
+import { AssetManager } from '../engine/assets/assetManager';
 import { WasmEngine } from '../engine/wasmEngine/wasmEngine';
 import { type WasmRun } from '../engine/wasmEngine/wasmRun';
 import {
