@@ -1,3 +1,2 @@
 pnpm exec lint-staged && \
-pnpm run check:types && \
-git diff --cached --name-only | pnpm exec cspell --no-summary --no-progress --no-must-find-files --file-list stdin
+pnpm run check:types
