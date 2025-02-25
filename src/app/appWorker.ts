@@ -514,10 +514,10 @@ class AppWorker {
   }
 
   public onCanvasDisplayResize(
-    displayWidth: number,
-    displayHeight: number,
+    _displayWidth: number,
+    _displayHeight: number,
   ): void {
-    console.log('onCanvasDisplayResize', displayWidth, displayHeight);
+    // console.log('onCanvasDisplayResize', displayWidth, displayHeight);
   }
 }
 
