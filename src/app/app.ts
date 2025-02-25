@@ -7,7 +7,7 @@ import type {
   // CanvasDisplayResizeEvent,
 } from './events';
 import {
-  StartViewMode,
+  // StartViewMode,
   type EnginePanelConfig,
   mainConfig,
 } from '../config/mainConfig';
