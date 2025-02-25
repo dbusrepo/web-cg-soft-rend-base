@@ -66,6 +66,8 @@ abstract class Panel {
   protected viewMode: ViewMode;
   protected preViewMode: ViewMode;
 
+  protected forceFullWin: boolean;
+
   constructor(board: HTMLDivElement, parentNode: HTMLDivElement) {
     this.board = board;
     this.parentNode = parentNode;
@@ -145,10 +147,16 @@ abstract class Panel {
   }
 
   private initFullWinMode(): void {
-    // console.log('start view mode: ' + this._config.startViewMode);
-    if (this.cfg.startViewMode === StartViewMode.FULL_WIN) {
+    this.forceFullWin =
+      this.panelContainer.offsetHeight >= this.board.offsetHeight ||
+      this.panelContainer.offsetWidth >= this.board.offsetWidth;
+
+    if (
+      this.forceFullWin ||
+      this.cfg.startViewMode === StartViewMode.FULL_WIN
+    ) {
       // console.log('Can start in fw: ' + this.canStartInFullWin());
-      if (this.canStartInFullWin()) {
+      if (this.forceFullWin || this.canStartInFullWin()) {
         this.setFullWin(true);
       } else {
         this.cfg.startViewMode = StartViewMode.WIN;
@@ -226,7 +234,7 @@ abstract class Panel {
     );
     const fromFullWin = this.preViewMode === ViewMode.FULL_WIN;
     this.setFullWin(false);
-    if (fromFullWin) {
+    if (fromFullWin || this.forceFullWin) {
       this.setFullWin(true);
     }
   }
@@ -681,7 +689,7 @@ abstract class Panel {
       this.preViewMode = ViewMode.FULL_WIN;
       this.setFullScreen(false);
     } else {
-      this.setFullWin(!this.isFullWin);
+      this.setFullWin(this.forceFullWin ? true : !this.isFullWin);
     }
   }
 
