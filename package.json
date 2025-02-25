@@ -27,7 +27,8 @@
     "lint:ts-coverage": "type-coverage",
     "ts-coverage:report": "typescript-coverage-report",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "prepare": "husky && husky install"
   },
   "dependencies": {
     "@jsier/retrier": "^1.2.4",
@@ -82,6 +83,8 @@
     "eslint-plugin-unicorn": "^56.0.1",
     "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.14.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.4.3",
     "onchange": "^7.1.0",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
