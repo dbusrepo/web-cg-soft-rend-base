@@ -12,6 +12,7 @@
     "build": "pnpm run build:assets && pnpm run build:wasm && tsc && vite build",
     "serve": "vite preview",
     "type-check": "tsc --noemit",
+    "check:types": "tsc --noEmit -p tsconfig.eslint.json",
     "build:asc": "cd src/engine/wasmEngine/wasm && make build_asc",
     "build:wat": "cd src/engine/wasmEngine/wasm && make build_wat",
     "build:wasm": "pnpm run build:asc && pnpm run build:wat",
