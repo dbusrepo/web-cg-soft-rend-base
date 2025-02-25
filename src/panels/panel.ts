@@ -205,7 +205,7 @@ abstract class Panel {
     }
     if (enable) {
       this.enableFullScreenMode();
-      await screenfull.request(this.panelContainer, { navigationUI: 'hide' });
+      await screenfull.request(this.panelDiv, { navigationUI: 'hide' });
     } else {
       assert(screenfull.isFullscreen);
       await screenfull.exit();
