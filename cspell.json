@@ -15,7 +15,15 @@
     "codepaths",
     "UFPS",
     "ufps",
-    "MILLI"
+    "MILLI",
+    "fullwin",
+    "perc",
+    "Perc",
+    "recentered",
+    "yorha",
+    "reinit",
+    "FULLWIN",
+    "removefrom"
   ],
   "flagWords": [],
   "ignorePaths": [
