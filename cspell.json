@@ -1,7 +1,22 @@
 {
   "version": "0.2",
   "language": "en",
-  "words": ["pnpm", "commitlint", "tailwindcss", "svgr", "zustand", "Avenir"],
+  "words": [
+    "pnpm",
+    "commitlint",
+    "brettz",
+    "sonarjs",
+    "guify",
+    "vivaxy",
+    "transferables",
+    "tweakpane",
+    "jqueryui",
+    "screenfull",
+    "codepaths",
+    "UFPS",
+    "ufps",
+    "MILLI"
+  ],
   "flagWords": [],
   "ignorePaths": [
     "node_modules/",

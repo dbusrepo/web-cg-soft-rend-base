@@ -298,7 +298,7 @@ class App {
       bg: '#020',
       graphHeight: 100,
     });
-    // const unlockedFpsPanel = new StatsPanel(StatsNames.FPSU, '#f50', '#110');
+    // const unlockedFpsPanel = new StatsPanel(StatsNames.UFPS, '#f50', '#110');
     // const wasmHeapMem = new StatsPanel(StatsNames.WASM_HEAP, '#0b0', '#030');
     // this.mem_panel = new StatsPanel('MEM', '#ff0', '#330');
     stats.addPanel(fpsPanel);

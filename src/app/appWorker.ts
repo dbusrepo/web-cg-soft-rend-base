@@ -127,14 +127,14 @@ class AppWorker {
     this.pressA = new InputAction('A', InputActionBehavior.NORMAL);
     // this.pressA = new InputAction(
     //   'A',
-    //   InputActionBehavior.DETECT_INITAL_PRESS_ONLY,
+    //   InputActionBehavior.DETECT_INITIAL_PRESS_ONLY,
     // );
     this.inputManager.mapToKey(EnginePanelInputKeyCodeEnum.KEY_A, this.pressA);
 
     this.pressB = new InputAction('B', InputActionBehavior.NORMAL);
     // this.pressB = new InputAction(
     //   'B',
-    //   InputActionBehavior.DETECT_INITAL_PRESS_ONLY,
+    //   InputActionBehavior.DETECT_INITIAL_PRESS_ONLY,
     // );
     this.inputManager.mapToKey(EnginePanelInputKeyCodeEnum.KEY_B, this.pressB);
 
@@ -281,7 +281,7 @@ class AppWorker {
     //   command: AppCommandEnum.EVENT,
     //   params: {
     //     event: 'A pressed',
-    //     msg: 'ahooo',
+    //     msg: '',
     //   } as EventLog,
     // });
     // }
@@ -291,7 +291,7 @@ class AppWorker {
     //   command: AppCommandEnum.EVENT,
     //   params: {
     //     event: 'B pressed',
-    //     msg: 'bahooo',
+    //     msg: '',
     //   } as EventLog,
     // });
     // }
@@ -434,7 +434,6 @@ class AppWorker {
       statsTimeAcc += timeSinceLastFrameMs;
       if (statsTimeAcc >= AppWorker.STATS_PERIOD_MS) {
         statsTimeAcc %= AppWorker.STATS_PERIOD_MS;
-        // const tspent = (tnow - start_time) / App.MILLI_IN_SEC;
         const now = performance.now();
         const elapsed = now - lastStatsTime;
         lastStatsTime = now;

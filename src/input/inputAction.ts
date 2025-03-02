@@ -1,6 +1,6 @@
 enum InputActionBehavior {
   NORMAL,
-  DETECT_INITAL_PRESS_ONLY,
+  DETECT_INITIAL_PRESS_ONLY,
 }
 
 enum InputActionState {
@@ -61,7 +61,7 @@ class InputAction {
       if (this.state === InputActionState.RELEASED) {
         this.amount = 0;
       } else if (
-        this.behavior === InputActionBehavior.DETECT_INITAL_PRESS_ONLY
+        this.behavior === InputActionBehavior.DETECT_INITIAL_PRESS_ONLY
       ) {
         this.amount = 0;
         this.state = InputActionState.STATE_WAITING_FOR_RELEASE;
